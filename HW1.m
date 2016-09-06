@@ -40,12 +40,15 @@ rand_seq = ATGCdna(randi(4, 1, N));
 % in your seqeunce rand_seq. Hint: see the function strfind.
 ATG = strfind(rand_seq, 'ATG');
 stop_codon_positions = [strfind(rand_seq, 'TGA') strfind(rand_seq, 'TAG') strfind(rand_seq, 'TAA')]; 
-for i = 1: length (ATG)
-   for j =1: length (stop_codon_positions);
-  %orf = stop_codon_positions(i) - ATG(i);
-  
-   end;
-end;    
+i=1;
+start_codon = ATG(i);
+difference = (stop_codon_positions - start_codon);
+if mod(difference,3)==0;
+    B=mod(difference,3)==0;
+    C=difference(B);
+    maxdiff=max(C);
+end
+
 %part 3: copy your code in parts 1 and 2 but place it inside a loop that
 % runs 10000 times. Use this repeating operation to determine the probability
 % that an sequence of length 500 has an ORF of greater than 50 b.p.
