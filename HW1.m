@@ -21,7 +21,7 @@ else
 end     
 
 %output your answer
-
+z=8
 %% Problem 2 - our first real biology problem. Open reading frames and nested loops.
 
 %part 1: write a piece of code that creates a random DNA sequence of length
